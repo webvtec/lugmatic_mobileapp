@@ -36,7 +36,7 @@ dependencies:
   socket_io_client: ^3.0.2 # Real-time chat/gifts via Socket.io
 
   # Live Streaming
-  livekit_client: ">=2.4.9 <2.5.0" # WebRTC video/audio via LiveKit
+  livekit_client: ^2.13.1 # WebRTC video/audio via LiveKit
   visibility_detector: ^0.4.0 # For knowing when a stream is visible on screen
 
   # Secure Storage
@@ -46,7 +46,7 @@ dependencies:
   cached_network_image: ^3.3.1 # To display and cache images from the network efficiently
   google_fonts: ^6.2.1 # For easily using custom fonts from the Google Fonts library
   intl: ^0.20.2 # For internationalization and formatting dates/numbers (matches flutter_localizations)
-  font_awesome_flutter: ^10.7.0 # Provides a huge set of additional icons
+  font_awesome_flutter: ^11.0.0 # Provides a huge set of additional icons
   flutter_svg: ^2.0.10+1 # For rendering SVG files
 
   # In-App Purchases & Monetization

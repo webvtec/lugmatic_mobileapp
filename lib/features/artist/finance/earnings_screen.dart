@@ -202,7 +202,9 @@ class _EarningsScreenState extends State<EarningsScreen> {
               color: (isGift ? AppColors.secondary : AppColors.primary).withValues(alpha: 0.1),
               shape: BoxShape.circle,
             ),
-            child: Icon(isGift ? FontAwesomeIcons.gift : Icons.music_note, color: isGift ? AppColors.secondary : AppColors.primary, size: 16),
+            child: isGift
+                ? const FaIcon(FontAwesomeIcons.gift, color: AppColors.secondary, size: 16)
+                : const Icon(Icons.music_note, color: AppColors.primary, size: 16),
           ),
           const SizedBox(width: 16),
           Expanded(

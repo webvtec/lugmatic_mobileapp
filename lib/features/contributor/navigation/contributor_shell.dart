@@ -53,7 +53,7 @@ class _ContributorShellState extends State<ContributorShell> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 _buildNavItem(
-                  icon: FontAwesomeIcons.chartPie,
+                  faIcon: FontAwesomeIcons.chartPie,
                   label: 'Dashboard',
                   index: 0,
                 ),
@@ -76,7 +76,8 @@ class _ContributorShellState extends State<ContributorShell> {
   }
 
   Widget _buildNavItem({
-    required IconData icon,
+    IconData? icon,
+    FaIconData? faIcon,
     required String label,
     required int index,
   }) {
@@ -96,11 +97,17 @@ class _ContributorShellState extends State<ContributorShell> {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(
-              icon,
-              size: 18,
-              color: color,
-            ),
+            faIcon != null
+                ? FaIcon(
+                    faIcon,
+                    size: 18,
+                    color: color,
+                  )
+                : Icon(
+                    icon,
+                    size: 18,
+                    color: color,
+                  ),
             const SizedBox(width: 8),
             Text(
               label,

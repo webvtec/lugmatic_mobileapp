@@ -183,7 +183,7 @@ class _GoLiveBanner extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(14),
           decoration: BoxDecoration(color: AppColors.primary.withValues(alpha: 0.15), shape: BoxShape.circle, border: Border.all(color: AppColors.primary.withValues(alpha: 0.4))),
-          child: const Icon(FontAwesomeIcons.towerBroadcast, color: AppColors.primary, size: 22),
+          child: const FaIcon(FontAwesomeIcons.towerBroadcast, color: AppColors.primary, size: 22),
         ),
         const SizedBox(width: 16),
         Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
@@ -226,7 +226,7 @@ class _StatsRow extends StatelessWidget {
   }
 }
 
-class _StatData { final String label, value; final IconData icon; final Color color; const _StatData(this.label, this.value, this.icon, this.color); }
+class _StatData { final String label, value; final FaIconData icon; final Color color; const _StatData(this.label, this.value, this.icon, this.color); }
 class _StatCell extends StatelessWidget {
   final _StatData data; const _StatCell({required this.data});
   @override
@@ -269,7 +269,7 @@ class _QuickActions extends StatelessWidget {
   }
 }
 
-class _QuickAction { final String label; final IconData icon; final Color color; final VoidCallback onTap; const _QuickAction(this.label, this.icon, this.color, this.onTap); }
+class _QuickAction { final String label; final FaIconData icon; final Color color; final VoidCallback onTap; const _QuickAction(this.label, this.icon, this.color, this.onTap); }
 
 class _SectionHeader extends StatelessWidget {
   final String title; final String? action; final VoidCallback? onAction;
@@ -317,7 +317,7 @@ class _ActivityItem extends StatelessWidget {
   final Transaction transaction; const _ActivityItem({required this.transaction});
   @override
   Widget build(BuildContext context) {
-    final IconData icon; final Color color;
+    final FaIconData icon; final Color color;
     if (transaction.type == 'gift_received') { icon = FontAwesomeIcons.gift; color = AppColors.secondary; }
     else if (transaction.type == 'payout') { icon = FontAwesomeIcons.wallet; color = Colors.orangeAccent; }
     else { icon = FontAwesomeIcons.moneyBillTransfer; color = AppColors.primary; }
@@ -342,7 +342,7 @@ class _ActivityItem extends StatelessWidget {
 }
 
 class _EmptyState extends StatelessWidget {
-  final IconData icon; final String message;
+  final FaIconData icon; final String message;
   const _EmptyState({required this.icon, required this.message});
   @override
   Widget build(BuildContext context) => Container(

@@ -610,7 +610,7 @@ class _UploadTrackScreenState extends State<UploadTrackScreen> {
     );
   }
 
-  Widget _buildTypeChip(String label, String type, IconData icon) {
+  Widget _buildTypeChip(String label, String type, FaIconData icon) {
     final isSelected = _selectedType == type;
     return Expanded(
       child: GestureDetector(
@@ -641,7 +641,7 @@ class _UploadTrackScreenState extends State<UploadTrackScreen> {
     );
   }
 
-  Widget _buildFilePicker({required String label, required String hint, required IconData icon, required VoidCallback onTap, File? preview}) {
+  Widget _buildFilePicker({required String label, required String hint, required FaIconData icon, required VoidCallback onTap, File? preview}) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [

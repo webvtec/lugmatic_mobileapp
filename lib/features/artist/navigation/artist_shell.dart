@@ -107,13 +107,13 @@ class _ArtistBottomNav extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
           _NavItem(
-              icon: FontAwesomeIcons.chartLine,
+              faIcon: FontAwesomeIcons.chartLine,
               label: 'Dashboard',
               index: 0,
               current: currentIndex,
               onTap: onTap),
           _NavItem(
-              icon: FontAwesomeIcons.music,
+              faIcon: FontAwesomeIcons.music,
               label: 'Tracks',
               index: 1,
               current: currentIndex,
@@ -124,7 +124,7 @@ class _ArtistBottomNav extends StatelessWidget {
             onTap: () => onTap(2),
           ),
           _NavItem(
-              icon: FontAwesomeIcons.fire,
+              faIcon: FontAwesomeIcons.fire,
               label: 'Clashes',
               index: 3,
               current: currentIndex,
@@ -144,7 +144,8 @@ class _ArtistBottomNav extends StatelessWidget {
 }
 
 class _NavItem extends StatelessWidget {
-  final IconData icon;
+  final IconData? icon;
+  final FaIconData? faIcon;
   final String label;
   final int index;
   final int current;
@@ -153,7 +154,8 @@ class _NavItem extends StatelessWidget {
   final IconData? activeIcon;
 
   const _NavItem({
-    required this.icon,
+    this.icon,
+    this.faIcon,
     required this.label,
     required this.index,
     required this.current,
@@ -191,7 +193,7 @@ class _NavItem extends StatelessWidget {
                       color: active
                           ? AppColors.primary
                           : const Color(0xFF5A5A6E))
-                  : FaIcon(icon,
+                  : FaIcon(faIcon,
                       size: 18,
                       color: active
                           ? AppColors.primary
@@ -258,7 +260,7 @@ class _LiveButton extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: const Icon(
+                  child: const FaIcon(
                     FontAwesomeIcons.video,
                     color: Colors.black,
                     size: 22,

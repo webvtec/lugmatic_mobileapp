@@ -320,7 +320,7 @@ class _ContributorDashboardScreenState extends State<ContributorDashboardScreen>
   Widget _buildMiniStat({
     required String title,
     required String value,
-    required IconData icon,
+    required FaIconData icon,
   }) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -337,7 +337,7 @@ class _ContributorDashboardScreenState extends State<ContributorDashboardScreen>
               color: AppColors.secondary.withValues(alpha: 0.1),
               borderRadius: BorderRadius.circular(12),
             ),
-            child: Icon(icon, color: AppColors.secondary, size: 16),
+            child: FaIcon(icon, color: AppColors.secondary, size: 16),
           ),
           const SizedBox(width: 14),
           Expanded(

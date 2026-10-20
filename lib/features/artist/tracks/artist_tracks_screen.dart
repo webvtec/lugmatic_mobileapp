@@ -77,7 +77,7 @@ class _ArtistTracksScreenState extends State<ArtistTracksScreen> {
                     }
                     if (provider.tracks.isEmpty) {
                       return Center(child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-                        Icon(FontAwesomeIcons.music, color: AppColors.mutedForeground.withValues(alpha: 0.3), size: 64),
+                        FaIcon(FontAwesomeIcons.music, color: AppColors.mutedForeground.withValues(alpha: 0.3), size: 64),
                         const SizedBox(height: 24),
                         const Text('No tracks in your library.', style: TextStyle(color: AppColors.mutedForeground, fontSize: 16)),
                       ]));
@@ -152,7 +152,7 @@ class _TrackItem extends StatelessWidget {
           ])),
           Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
             Row(children: [
-              const Icon(FontAwesomeIcons.play, color: AppColors.primary, size: 10),
+              const FaIcon(FontAwesomeIcons.play, color: AppColors.primary, size: 10),
               const SizedBox(width: 4),
               Text(NumberFormat.compact().format(track.playCount), style: const TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold, fontSize: 14)),
             ]),
@@ -204,7 +204,7 @@ class _TrackItem extends StatelessWidget {
     );
   }
 
-  Widget _placeholderCover() => Container(width: 64, height: 64, decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(16)), child: const Icon(FontAwesomeIcons.music, color: AppColors.primary, size: 24));
+  Widget _placeholderCover() => Container(width: 64, height: 64, decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(16)), child: const FaIcon(FontAwesomeIcons.music, color: AppColors.primary, size: 24));
 }
 
 class _StatusBadge extends StatelessWidget {
